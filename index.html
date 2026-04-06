@@ -151,22 +151,6 @@
 		}
 		.btn-shine:hover::after { left: 100%; }
 
-		/* Quiz sidebar tab */
-		.qwiz__icons {
-			position: fixed; bottom: 150px; right: -92px;
-			border-radius: 8px 8px 0 0;
-			background-color: #D97706;
-			padding: 10px 26px;
-			transform: rotate(-90deg);
-			z-index: 2;
-			display: flex; align-items: center;
-			transition: all 0.3s ease;
-		}
-		.qwiz__icons:hover { background-color: #B45309; }
-		.qwiz__icons img { margin-right: 10px; }
-		.qwiz__icons span { font-size: 12px; color: #0F172A; font-weight: 600; }
-		.qwiz__icons a { display: flex; align-items: center; }
-
 		/* Focus styles */
 		*:focus-visible { outline: 2px solid #0B3D91; outline-offset: 2px; border-radius: 4px; }
 
@@ -341,7 +325,6 @@
 
 					<div class="header__contacts hidden md:flex items-center gap-5">
 						<a href="tel:+74923275418" class="phone text-lg font-bold text-white hover:text-accent-300 transition-colors tracking-wide hidden lg:block">+7 (49232) 7-54-18</a>
-						<a data-popup="#perezvonite" class="button btn-shine inline-flex items-center px-6 py-2.5 bg-brand-500 text-white text-xs font-semibold uppercase tracking-wider rounded-full shadow-lg shadow-brand-500/25 hover:bg-brand-600 hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">Звонок</a>
 					</div>
 				</div>
 			</div>
@@ -371,11 +354,11 @@
 							Маркировка молочной упаковки "Честный знак"
 						</p>
 						<div class="flex flex-col sm:flex-row gap-4">
-							<a data-popup="#zayav" class="btn-shine inline-flex items-center justify-center px-8 py-4 bg-brand-500 text-white font-semibold rounded-xl shadow-lg shadow-brand-500/30 hover:bg-brand-600 hover:shadow-brand-500/50 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer text-sm tracking-wide">
-								Оставить заявку
+							<a href="catalog-produkcii/index.html" class="btn-shine inline-flex items-center justify-center px-8 py-4 bg-brand-500 text-white font-semibold rounded-xl shadow-lg shadow-brand-500/30 hover:bg-brand-600 hover:shadow-brand-500/50 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer text-sm tracking-wide">
+								Смотреть каталог
 							</a>
-							<a data-popup="#qwiz_start" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white font-semibold rounded-xl border border-white/25 backdrop-blur-sm hover:bg-white/20 hover:border-white/50 transition-all duration-300 cursor-pointer text-sm tracking-wide">
-								Получить коммерческое предложение
+							<a href="#contacts" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white font-semibold rounded-xl border border-white/25 backdrop-blur-sm hover:bg-white/20 hover:border-white/50 transition-all duration-300 cursor-pointer text-sm tracking-wide">
+								Связаться с нами
 							</a>
 						</div>
 					</div>
@@ -496,31 +479,32 @@
 			</section>
 
 			<!-- ADVANTAGES SECTION -->
-			<section class="py-14 sm:py-20 lg:py-28 bg-slate-50">
-				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 lg:mb-16 reveal">
-						<div>
-							<h2 class="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-slate-900">Преимущество нашей компании</h2>
-							<div class="w-12 h-0.5 bg-accent-500 rounded mt-4"></div>
-						</div>
-						<div class="advantages-slider__arrows flex gap-3">
-							<div class="advantages-slider__arrow-prev advantages-slider__arrow"></div>
-							<div class="advantages-slider__arrow-next advantages-slider__arrow"></div>
-						</div>
-					</div>
-					<div class="advantages__swiper reveal">
-						<div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-							<div class="group bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-gradient-to-r before:from-brand-500 before:to-accent-500 before:opacity-0 before:transition-opacity hover:before:opacity-100">
-								<img loading="lazy" src="wp-content/uploads/2023/08/1.png" alt="Доверие" class="w-16 h-16 object-contain bg-brand-50 rounded-xl p-2 mb-6">
-								<p class="font-bold text-slate-800 text-base leading-relaxed">Доверие: <br> более 29 лет на рынке</p>
+			<section class="advantages__section py-14 sm:py-20 lg:py-28 bg-slate-50">
+				<div class="advantages__container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="advantages__body">
+						<div class="advantages__left flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 lg:mb-16 reveal">
+							<div>
+								<h2 class="title-28 text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-slate-900">Преимущество нашей компании</h2>
 							</div>
-							<div class="group bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-gradient-to-r before:from-brand-500 before:to-accent-500 before:opacity-0 before:transition-opacity hover:before:opacity-100">
-								<img loading="lazy" src="wp-content/uploads/2023/08/2.png" alt="Качество" class="w-16 h-16 object-contain bg-brand-50 rounded-xl p-2 mb-6">
-								<p class="font-bold text-slate-800 text-base leading-relaxed">Качество: <br> сырьё DOW, ExxonMobil, ГОСТ</p>
+							<div class="advantages-slider__arrows flex gap-3">
+								<div class="advantages-slider__arrow-prev advantages-slider__arrow"></div>
+								<div class="advantages-slider__arrow-next advantages-slider__arrow"></div>
 							</div>
-							<div class="group bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-gradient-to-r before:from-brand-500 before:to-accent-500 before:opacity-0 before:transition-opacity hover:before:opacity-100">
-								<img loading="lazy" src="wp-content/uploads/2023/08/3.png" alt="Полный цикл" class="w-16 h-16 object-contain bg-brand-50 rounded-xl p-2 mb-6">
-								<p class="font-bold text-slate-800 text-base leading-relaxed">Полный цикл: <br> от дизайна до логистики</p>
+						</div>
+						<div class="advantages__right reveal">
+							<div class="advantages__swiper">
+								<div class="advantages__item group bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-gradient-to-r before:from-brand-500 before:to-accent-500 before:opacity-0 before:transition-opacity hover:before:opacity-100">
+									<img loading="lazy" src="wp-content/uploads/2023/08/1.png" alt="Доверие" class="w-16 h-16 object-contain bg-brand-50 rounded-xl p-2 mb-6">
+									<p class="text-15 bold font-bold text-slate-800 text-base leading-relaxed">Доверие: <br> более 29 лет на рынке</p>
+								</div>
+								<div class="advantages__item group bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-gradient-to-r before:from-brand-500 before:to-accent-500 before:opacity-0 before:transition-opacity hover:before:opacity-100">
+									<img loading="lazy" src="wp-content/uploads/2023/08/2.png" alt="Качество" class="w-16 h-16 object-contain bg-brand-50 rounded-xl p-2 mb-6">
+									<p class="text-15 bold font-bold text-slate-800 text-base leading-relaxed">Качество: <br> сырьё DOW, ExxonMobil, ГОСТ</p>
+								</div>
+								<div class="advantages__item group bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-gradient-to-r before:from-brand-500 before:to-accent-500 before:opacity-0 before:transition-opacity hover:before:opacity-100">
+									<img loading="lazy" src="wp-content/uploads/2023/08/3.png" alt="Полный цикл" class="w-16 h-16 object-contain bg-brand-50 rounded-xl p-2 mb-6">
+									<p class="text-15 bold font-bold text-slate-800 text-base leading-relaxed">Полный цикл: <br> от дизайна до логистики</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -541,32 +525,37 @@
 								<p>ООО &laquo;АРГО&raquo; &mdash; ваша упаковка в надёжных руках: опыт, профессионализм и технологии, проверенные временем.</p>
 							</div>
 							<div class="mt-8">
-								<a data-popup="#qwiz_start" class="btn-shine inline-flex items-center px-8 py-3.5 bg-brand-500 text-white font-semibold rounded-xl shadow-lg shadow-brand-500/20 hover:bg-brand-600 hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer text-sm tracking-wide">
-									Запросить коммерческое предложение
+								<a href="#contacts" class="btn-shine inline-flex items-center px-8 py-3.5 bg-brand-500 text-white font-semibold rounded-xl shadow-lg shadow-brand-500/20 hover:bg-brand-600 hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer text-sm tracking-wide">
+									Связаться с нами
 								</a>
 							</div>
 						</div>
-						<div class="reveal">
-							<div class="about__swiper about-gallery grid grid-cols-2 gap-4" data-gallery>
-								<div class="rounded-2xl overflow-hidden shadow-xl aspect-square">
-									<img loading="lazy" src="wp-content/uploads/brand/p01_img01.jpeg" data-gallery-item alt="Производство полиэтиленовой продукции" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer">
+						<div class="about__right reveal rounded-2xl overflow-hidden shadow-xl">
+							<div class="about__swiper" data-gallery>
+								<div class="about__item -ibg" style="cursor:pointer;">
+									<img loading="lazy" src="wp-content/uploads/brand/p01_img01.jpeg" data-gallery-item alt="Производство полиэтиленовой продукции" class="w-full h-auto rounded-2xl">
 								</div>
-								<div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] mt-8">
-									<img loading="lazy" src="wp-content/uploads/brand/p02_img02.jpeg" data-gallery-item alt="Производство полиэтиленовой продукции" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer">
+								<div class="about__item -ibg" style="cursor:pointer;">
+									<img loading="lazy" src="wp-content/uploads/brand/p02_img02.jpeg" data-gallery-item alt="Производство полиэтиленовой продукции" class="w-full h-auto rounded-2xl">
 								</div>
-								<div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] -mt-8">
-									<img loading="lazy" src="wp-content/uploads/brand/p03_img02.jpeg" data-gallery-item alt="Производство полиэтиленовой продукции" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer">
+								<div class="about__item -ibg" style="cursor:pointer;">
+									<img loading="lazy" src="wp-content/uploads/brand/p03_img02.jpeg" data-gallery-item alt="Производство полиэтиленовой продукции" class="w-full h-auto rounded-2xl">
 								</div>
-								<div class="rounded-2xl overflow-hidden shadow-xl aspect-square">
-									<img loading="lazy" src="wp-content/uploads/brand/p04_img02.jpeg" data-gallery-item alt="Производство полиэтиленовой продукции" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer">
+								<div class="about__item -ibg" style="cursor:pointer;">
+									<img loading="lazy" src="wp-content/uploads/brand/p04_img02.jpeg" data-gallery-item alt="Производство полиэтиленовой продукции" class="w-full h-auto rounded-2xl">
 								</div>
-							</div>
-							<!-- Hidden gallery items -->
-							<div class="hidden">
-								<img src="wp-content/uploads/brand/p05_img02.jpeg" data-gallery-item alt="Производство полиэтиленовой продукции">
-								<img src="wp-content/uploads/brand/p11_img02.jpeg" data-gallery-item alt="Флексопечать">
-								<img src="wp-content/uploads/brand/p12_img02.jpeg" data-gallery-item alt="Производство АРГО">
-								<img src="wp-content/uploads/brand/p14_img02.jpeg" data-gallery-item alt="Производство АРГО">
+								<div class="about__item -ibg" style="cursor:pointer;">
+									<img loading="lazy" src="wp-content/uploads/brand/p05_img02.jpeg" data-gallery-item alt="Производство полиэтиленовой продукции" class="w-full h-auto rounded-2xl">
+								</div>
+								<div class="about__item -ibg" style="cursor:pointer;">
+									<img loading="lazy" src="wp-content/uploads/brand/p11_img02.jpeg" data-gallery-item alt="Флексопечать" class="w-full h-auto rounded-2xl">
+								</div>
+								<div class="about__item -ibg" style="cursor:pointer;">
+									<img loading="lazy" src="wp-content/uploads/brand/p12_img02.jpeg" data-gallery-item alt="Производство АРГО" class="w-full h-auto rounded-2xl">
+								</div>
+								<div class="about__item -ibg" style="cursor:pointer;">
+									<img loading="lazy" src="wp-content/uploads/brand/p14_img02.jpeg" data-gallery-item alt="Производство АРГО" class="w-full h-auto rounded-2xl">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -574,12 +563,11 @@
 			</section>
 
 			<!-- REVIEWS SECTION -->
-			<section class="py-14 sm:py-20 lg:py-28 bg-slate-50" id="reviews">
+			<section class="reviews__section py-14 sm:py-20 lg:py-28 bg-slate-50" id="reviews">
 				<div class="reviews__container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div class="flex items-end justify-between gap-6 mb-12 lg:mb-16 reveal">
+					<div class="reviews__title flex items-end justify-between gap-6 mb-12 lg:mb-16 reveal">
 						<div>
-							<h2 class="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-slate-900">Отзывы</h2>
-							<div class="w-12 h-0.5 bg-accent-500 rounded mt-4"></div>
+							<h2 class="title-28 text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-slate-900">Отзывы</h2>
 						</div>
 						<div class="reviews-slider__arrows slider__arrows flex gap-3">
 							<div class="reviews-slider__arrow-prev reviews-slider__arrow slider__arrow slider__arrow-prev"></div>
@@ -587,15 +575,15 @@
 						</div>
 					</div>
 					<div class="reviews__body reveal">
-						<div class="reviews__swiper grid grid-cols-1 md:grid-cols-3 gap-6" data-gallery>
-							<div class="rounded-2xl overflow-hidden bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-								<img loading="lazy" src="wp-content/uploads/2023/08/1-4.png" data-gallery-item alt="Отзыв" class="w-full h-auto cursor-pointer">
+						<div class="reviews__swiper" data-gallery>
+							<div class="reviews__item -ibg rounded-2xl overflow-hidden bg-white border border-slate-100 shadow-sm">
+								<img loading="lazy" src="wp-content/uploads/2023/08/1-4.png" data-gallery-item alt="Отзыв" class="w-full h-auto cursor-pointer rounded-2xl">
 							</div>
-							<div class="rounded-2xl overflow-hidden bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-								<img loading="lazy" src="wp-content/uploads/2023/09/Blagodarnost.jpeg" data-gallery-item alt="Отзыв" class="w-full h-auto cursor-pointer">
+							<div class="reviews__item -ibg rounded-2xl overflow-hidden bg-white border border-slate-100 shadow-sm">
+								<img loading="lazy" src="wp-content/uploads/2023/09/Blagodarnost.jpeg" data-gallery-item alt="Отзыв" class="w-full h-auto cursor-pointer rounded-2xl">
 							</div>
-							<div class="rounded-2xl overflow-hidden bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-								<img loading="lazy" src="wp-content/uploads/2023/09/ARGO-Blagodarnost.jpg" data-gallery-item alt="Отзыв" class="w-full h-auto cursor-pointer">
+							<div class="reviews__item -ibg rounded-2xl overflow-hidden bg-white border border-slate-100 shadow-sm">
+								<img loading="lazy" src="wp-content/uploads/2023/09/ARGO-Blagodarnost.jpg" data-gallery-item alt="Отзыв" class="w-full h-auto cursor-pointer rounded-2xl">
 							</div>
 						</div>
 					</div>
@@ -615,15 +603,17 @@
 								<div class="diplom-slider__arrow-next diplom-slider__arrow slider__arrow slider__arrow-next"></div>
 							</div>
 						</div>
-						<div class="diplom__swiper grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 lg:gap-6" data-gallery>
-							<div class="rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-								<img loading="lazy" src="wp-content/uploads/2023/09/4.jpg" class="w-full h-auto cursor-pointer" data-gallery-item alt="Диплом">
-							</div>
-							<div class="rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-								<img loading="lazy" src="wp-content/uploads/2023/09/7.jpg" class="w-full h-auto cursor-pointer" data-gallery-item alt="Диплом">
-							</div>
-							<div class="rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-								<img loading="lazy" src="wp-content/uploads/2023/09/10.jpg" class="w-full h-auto cursor-pointer" data-gallery-item alt="Диплом">
+						<div class="diplom__right">
+							<div class="diplom__swiper" data-gallery>
+								<div class="diplom__item">
+									<img loading="lazy" src="wp-content/uploads/2023/09/4.jpg" style="cursor:pointer;" data-gallery-item alt="Диплом" class="w-full h-auto rounded-xl">
+								</div>
+								<div class="diplom__item">
+									<img loading="lazy" src="wp-content/uploads/2023/09/7.jpg" style="cursor:pointer;" data-gallery-item alt="Диплом" class="w-full h-auto rounded-xl">
+								</div>
+								<div class="diplom__item">
+									<img loading="lazy" src="wp-content/uploads/2023/09/10.jpg" style="cursor:pointer;" data-gallery-item alt="Диплом" class="w-full h-auto rounded-xl">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -684,7 +674,7 @@
 								<p>Мы стремимся стать надёжным долгосрочным партнёром для каждого клиента, предлагая индивидуальный подход, высокое качество и решения, которые помогают бизнесу расти.</p>
 							</div>
 							<div class="mt-8">
-								<a data-popup="#zayav" class="btn-shine inline-flex items-center px-8 py-3.5 bg-brand-500 text-white font-semibold rounded-xl shadow-lg shadow-brand-500/20 hover:bg-brand-600 hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer text-sm tracking-wide">
+								<a href="#contacts" class="btn-shine inline-flex items-center px-8 py-3.5 bg-brand-500 text-white font-semibold rounded-xl shadow-lg shadow-brand-500/20 hover:bg-brand-600 hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer text-sm tracking-wide">
 									Стать партнёром
 								</a>
 							</div>
@@ -771,422 +761,13 @@
 		</footer>
 	</div>
 
-	<!-- POPUPS -->
-	<div id="perezvonite" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
-			<div class="popup__content">
-				<button data-close type="button" class="popup__close"></button>
-				<div class="popup__text">
-					<div class="popup__title title-28">
-						<h2>ОСТАВЬТЕ ЗАЯВКУ</h2>
-					</div>
-					<div class="popup__subtitle text-14">
-						<p>Мы перезвоним вам и уточним детали</p>
-					</div>
-					<div class="popup__body">
-						<div class="popup__input">
-							<form method="POST" class="popup__form perezvonite">
-								<label class="form__item">
-									<input class="input" name="name" type="text" data-required placeholder="Ваше имя*">
-								</label>
-								<label class="form__item">
-									<input class="input tel" name="phone" type="phone" data-required placeholder="Ваш телефон*">
-								</label>
-								<button type="submit" value="Отправить" class="submit">Отправить</button>
-							</form>
-							<p class="popup__politics">
-								Нажимая на кнопку "Отправить", вы соглашаетесь с
-								<a href="privacy-policy/index.html" target="_blank"> Политикой обработки персональных данных</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="zayav" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
-			<div class="popup__content">
-				<button data-close type="button" class="popup__close"></button>
-				<div class="popup__text">
-					<div class="popup__title title-28">
-						<h2>ОСТАВЬТЕ ЗАЯВКУ</h2>
-					</div>
-					<div class="popup__subtitle text-14">
-						<p>Мы перезвоним вам и уточним детали</p>
-					</div>
-					<div class="popup__body">
-						<div class="popup__input">
-							<form method="POST" class="popup__form zay">
-								<label class="form__item">
-									<input class="input" name="name" type="text" data-required  placeholder="Ваше имя*">
-									<span class="error_text">Пожалуйста, введите корректные данные</span>
-								</label>
-								<label class="form__item">
-									<input class="input" name="phone" type="phone" data-required placeholder="Ваш телефон*">
-									<span class="error_text">Пожалуйста, введите корректные данные</span>
-								</label>
-								<label class="form__item">
-									<input class="input" name="email" type="email" data-required placeholder="Ваша почта*">
-									<span class="error_text">Пожалуйста, введите корректные данные</span>
-								</label>
-								<label>
-									<input class="input" name="text" type="text" placeholder="Описание">
-								</label>
-								<button type="submit" value="Отправить" class="submit">Отправить</button>
-							</form>
-							<p class="popup__politics">
-								Нажимая на кнопку "Отправить", вы соглашаетесь с
-								<a href="privacy-policy/index.html" target="_blank"> Политикой обработки персональных данных</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="product" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
-			<div class="popup__content">
-				<button data-close type="button" class="popup__close"></button>
-				<div class="popup__text">
-					<div class="popup__title title-28">
-						<h2>ОСТАВЬТЕ ЗАЯВКУ</h2>
-					</div>
-					<div class="popup__subtitle text-14">
-						<p>Мы перезвоним вам и уточним детали</p>
-					</div>
-					<div class="popup__body">
-						<div class="popup__input">
-							<form method="POST" class="popup__form product">
-								<label class="form__item">
-									<input class="input" name="name" type="text" data-required  placeholder="Ваше имя*">
-									<span class="error_text">Пожалуйста, введите корректные данные</span>
-								</label>
-								<label class="form__item">
-									<input class="input" name="phone" type="phone" data-required placeholder="Ваш телефон*">
-									<span class="error_text">Пожалуйста, введите корректные данные</span>
-								</label>
-								<label class="form__item">
-									<input class="input" name="email" type="email" data-required placeholder="Ваша почта*">
-									<span class="error_text">Пожалуйста, введите корректные данные</span>
-								</label>
-								<label>
-									<input class="input" name="text" type="text" placeholder="Описание">
-								</label>
-								<input type="hidden" name="url" value="https://argoupac.ru/">
-								<button type="submit" value="Отправить" class="submit">Отправить</button>
-							</form>
-							<p class="popup__politics">
-								Нажимая на кнопку "Отправить", вы соглашаетесь с
-								<a href="privacy-policy/index.html" target="_blank"> Политикой обработки персональных данных</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="vakan" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
-			<div class="popup__content">
-				<button data-close type="button" class="popup__close"></button>
-				<div class="popup__text">
-					<div class="popup__title title-28">
-						<h2>ОСТАВЬТЕ ЗАЯВКУ</h2>
-					</div>
-					<div class="popup__subtitle text-14">
-						<p>Мы перезвоним вам и уточним детали</p>
-					</div>
-					<div class="popup__body">
-						<div class="popup__input">
-							<form method="POST" class="popup__form vakan">
-								<label class="form__item">
-									<input class="input" name="name" type="text" data-required  placeholder="Ваше имя*">
-								</label>
-								<label class="form__item">
-									<input class="input" name="phone" type="phone" data-required placeholder="Ваш телефон*">
-								</label>
-								<label class="form__item">
-									<input class="input" name="email" type="email" data-required placeholder="Ваша почта*">
-								</label>
-								<label>
-									<input class="input" name="text" type="text" placeholder="Описание">
-								</label>
-								<button type="submit" value="Отправить" class="submit">Отправить</button>
-							</form>
-							<p class="popup__politics">
-								Нажимая на кнопку "Отправить", вы соглашаетесь с
-								<a href="privacy-policy/index.html" target="_blank"> Политикой обработки персональных данных</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="popup__message" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
-			<div class="popup__content">
-				<button data-close type="button" class="popup__close"></button>
-				<div class="popup__text">
-					<div class="popup__title title-28">Спасибо</div>
-					<div class="popup__subtitle text-14">
-						<p>Мы получили заявку и свяжемся с вами</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="qwiz_start" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
-			<div class="popup__content popup__qwiz">
-				<button data-close type="button" class="popup__close"></button>
-				<div class="popup__text qwiz">
-					<div class="popup__left -ibg">
-							<img loading="lazy" src="wp-content/themes/Simple&#32;WP/img/popup/1.png" alt="">
-					</div>
-					<div class="popup__right">
-						<div class="popup__title" style="color: #00122D;font-family: Montserrat;font-size: 15px;font-style: normal;font-weight: 700;line-height: 24px;text-transform: uppercase;">Рассчитайте стоимость поставки пленки ответив на несколько вопросов</div>
-						<div class="line"></div>
-						<div class="popup__subtitle text-14">
-							<p>По итогам прохождения вы сможете выбрать один или несколько бонусов</p>
-						</div>
-						<a data-popup="#qwiz_opros" class="button">Рассчитать стоимость</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="qwiz_opros" aria-hidden="true" class="popup qwiz_opros">
-		<div class="popup__wrapper">
-			<div class="popup__content qwiz__opros">
-				<button data-close type="button" class="popup__close"></button>
-				<div class="popup__text">
-					<script>
-                            if (window.qmn_quiz_data === undefined) {
-                                    window.qmn_quiz_data = new Object();
-                            }
-                    </script><script>window.qmn_quiz_data["1"] = {"quiz_id":"1","quiz_name":"\u0420\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u0439\u0442\u0435 \u0441\u0442\u043e\u0438\u043c\u043e\u0441\u0442\u044c \u043f\u043e\u0441\u0442\u0430\u0432\u043a\u0438 \u043f\u043b\u0435\u043d\u043a\u0438 \u043e\u0442\u0432\u0435\u0442\u0438\u0432 \u043d\u0430 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432","disable_answer":"0","ajax_show_correct":"0","progress_bar":"0","contact_info_location":"1","qpages":{"1":{"id":"1","quizID":"1","pagekey":"kWgM8WO9","hide_prevbtn":"0"},"2":{"id":"2","quizID":"1","pagekey":"xFlVGEHL","hide_prevbtn":"0"},"3":{"id":"3","quizID":"1","pagekey":"BgFkZHj5","hide_prevbtn":"0"},"4":{"id":"4","quizID":"1","pagekey":"8aACc51B","hide_prevbtn":"0"}},"skip_validation_time_expire":"0","timer_limit_val":0,"disable_scroll_next_previous_click":"0","disable_scroll_on_result":0,"disable_first_page":"1","enable_result_after_timer_end":"0","enable_quick_result_mc":"0","end_quiz_if_wrong":0,"form_disable_autofill":"0","disable_mathjax":"1","enable_quick_correct_answer_info":"0","quick_result_correct_answer_text":"\u0412\u0435\u0440\u043d\u043e! \u0412\u044b \u0432\u044b\u0431\u0440\u0430\u043b\u0438 \u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u044b\u0439 \u043e\u0442\u0432\u0435\u0442","quick_result_wrong_answer_text":"\u041d\u0435\u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e! \u0412\u044b \u0432\u044b\u0431\u0440\u0430\u043b\u0438 \u043d\u0435\u0432\u0435\u0440\u043d\u044b\u0439 \u043e\u0442\u0432\u0435\u0442","quiz_processing_message":"","quiz_limit_choice":"\u0414\u043e\u0441\u0442\u0438\u0433\u043d\u0443\u0442 \u043b\u0438\u043c\u0438\u0442 \u0432\u044b\u0431\u043e\u0440\u0430.","not_allow_after_expired_time":"","scheduled_time_end":false,"prevent_reload":0,"limit_email_based_submission":0,"total_user_tries":0,"is_logged_in":false,"error_messages":{"email_error_text":"\u0410\u0434\u0440\u0435\u0441 e-mail \u043d\u0435 \u0432\u0435\u0440\u043d\u044b\u0439!","number_error_text":"\u042d\u0442\u043e \u043f\u043e\u043b\u0435 \u0434\u043e\u043b\u0436\u043d\u043e \u0431\u044b\u0442\u044c \u0447\u0438\u0441\u043b\u043e\u0432\u044b\u043c!","incorrect_error_text":"\u0412\u0432\u0435\u0434\u0451\u043d\u043d\u044b\u0439 \u0442\u0435\u043a\u0441\u0442 \u043d\u0435 \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u0435\u043d!","empty_error_text":"\u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u0437\u0430\u043f\u043e\u043b\u043d\u0438\u0442\u0435 \u0432\u0441\u0435 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u044b\u0435 \u043f\u043e\u043b\u044f!","url_error_text":"\u0412\u0432\u0435\u0434\u0451\u043d\u043d\u044b\u0439 URL-\u0430\u0434\u0440\u0435\u0441 \u043d\u0435 \u0432\u0435\u0440\u0435\u043d!","minlength_error_text":"\u0422\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u043d\u0435 \u043c\u0435\u043d\u0435\u0435 %minlength% \u0441\u0438\u043c\u0432\u043e\u043b\u043e\u0432.","maxlength_error_text":"\u041c\u0430\u043a\u0441\u0438\u043c\u0430\u043b\u044c\u043d\u043e \u0434\u043e\u043f\u0443\u0441\u0442\u0438\u043c\u043e %maxlength% \u0441\u0438\u043c\u0432\u043e\u043b\u043e\u0432.","recaptcha_error_text":"ReCaptcha is missing"},"questions_settings":[]}
-                    </script>		<div class='qsm-quiz-container qsm-quiz-container-1 qmn_quiz_container mlw_qmn_quiz  quiz_theme_default  '>
-								<form name="quizForm1" id="quizForm1" action="index.html" method="POST" class="qsm-quiz-form qmn_quiz_form mlw_quiz_form" novalidate enctype="multipart/form-data">
-				<input type="hidden" name="qsm_hidden_questions" id="qsm_hidden_questions" value="">
-				<input type="hidden" name="qsm_nonce" id="qsm_nonce_1" value="f7042b9fd0">
-				<input type="hidden" name="qsm_unique_key" id="qsm_unique_key_1" value="69c64b713c909">
-				<div id="mlw_error_message" class="qsm-error-message qmn_error_message_section"></div>
-				<span id="mlw_top_of_quiz"></span>
-								<section class="qsm-page qsm-question-page  qsm-page-1"
-						data-pid="1" data-qpid="1" data-prevbtn="0" style='display: none;'>
-														<div class='quiz_section qsm-question-wrapper question-type-0 question-section-id-1 ' data-qid='1'>
-											<span class='mlw_qmn_question_number'>1.&nbsp;</span>
-								<div class='mlw_qmn_new_question'>Укажите расход пленки в месяц </div>
-			<div class='mlw_qmn_question  qsm_remove_bold' >
-		<p></p>
-	</div>
-		<fieldset>
-		<legend></legend>
-	<div class='qmn_radio_answers '>
-								<div class="qmn_mc_answer_wrap  mrq_checkbox_class" id="question1-1 ">
-											<input type='radio' class='qmn_quiz_radio qmn-multiple-choice-input ' name="question1" id="question1_1" value="0" />
-					<label class="qsm-input-label" for="question1_1">
-					от 500 кг до 700 кг					</label>
-					 				</div>
-											<div class="qmn_mc_answer_wrap  mrq_checkbox_class" id="question1-2 ">
-											<input type='radio' class='qmn_quiz_radio qmn-multiple-choice-input ' name="question1" id="question1_2" value="1" />
-					<label class="qsm-input-label" for="question1_2">
-					от 700 до 1 тонны					</label>
-					 				</div>
-											<div class="qmn_mc_answer_wrap  mrq_checkbox_class" id="question1-3 ">
-											<input type='radio' class='qmn_quiz_radio qmn-multiple-choice-input ' name="question1" id="question1_3" value="2" />
-					<label class="qsm-input-label" for="question1_3">
-					от 1 тонны до 2 тонн					</label>
-					 				</div>
-											<div class="qmn_mc_answer_wrap  mrq_checkbox_class" id="question1-4 ">
-											<input type='radio' class='qmn_quiz_radio qmn-multiple-choice-input ' name="question1" id="question1_4" value="3" />
-					<label class="qsm-input-label" for="question1_4">
-					Более 2 тонн					</label>
-					 				</div>
-					 			<label style="display: none !important;" for="question1_none">Отсутствует</label>
-			<input type="radio" style="display: none;" name="question1" id="question1_none" checked="checked" value="" />
-				</div>
-	</fieldset>
-	<input type="hidden" name="answer_limit_keys_1" value="" />
-							</div>
-										<span class="pages_count">
-					1 из 4					</span>
-								</section>
-								<section class="qsm-page qsm-question-page  qsm-page-2"
-						data-pid="2" data-qpid="2" data-prevbtn="0" style='display: none;'>
-														<div class='quiz_section qsm-question-wrapper question-type-0 question-section-id-2 ' data-qid='2'>
-											<span class='mlw_qmn_question_number'>2.&nbsp;</span>
-								<div class='mlw_qmn_new_question'>С чем связан поиск упаковки? </div>
-			<div class='mlw_qmn_question  qsm_remove_bold' >
-		<p></p>
-	</div>
-		<fieldset>
-		<legend></legend>
-	<div class='qmn_radio_answers '>
-								<div class="qmn_mc_answer_wrap  mrq_checkbox_class" id="question2-1 ">
-											<input type='radio' class='qmn_quiz_radio qmn-multiple-choice-input ' name="question2" id="question2_1" value="0" />
-					<label class="qsm-input-label" for="question2_1">
-					Открываем новое производство					</label>
-					 				</div>
-											<div class="qmn_mc_answer_wrap  mrq_checkbox_class" id="question2-2 ">
-											<input type='radio' class='qmn_quiz_radio qmn-multiple-choice-input ' name="question2" id="question2_2" value="1" />
-					<label class="qsm-input-label" for="question2_2">
-					Не устраивает качество текущей упаковки					</label>
-					 				</div>
-											<div class="qmn_mc_answer_wrap  mrq_checkbox_class" id="question2-3 ">
-											<input type='radio' class='qmn_quiz_radio qmn-multiple-choice-input ' name="question2" id="question2_3" value="2" />
-					<label class="qsm-input-label" for="question2_3">
-					Ребрендинг					</label>
-					 				</div>
-											<div class="qmn_mc_answer_wrap  mrq_checkbox_class" id="question2-4 ">
-											<input type='radio' class='qmn_quiz_radio qmn-multiple-choice-input ' name="question2" id="question2_4" value="3" />
-					<label class="qsm-input-label" for="question2_4">
-					Запускаем новый продукт					</label>
-					 				</div>
-											<div class="qmn_mc_answer_wrap  mrq_checkbox_class" id="question2-5 ">
-											<input type='radio' class='qmn_quiz_radio qmn-multiple-choice-input ' name="question2" id="question2_5" value="4" />
-					<label class="qsm-input-label" for="question2_5">
-					Не устраивают текущие сроки поставки					</label>
-					 				</div>
-											<div class="qmn_mc_answer_wrap  mrq_checkbox_class" id="question2-6 ">
-											<input type='radio' class='qmn_quiz_radio qmn-multiple-choice-input ' name="question2" id="question2_6" value="5" />
-					<label class="qsm-input-label" for="question2_6">
-					Не устраивают текущая цена					</label>
-					 				</div>
-					 			<label style="display: none !important;" for="question2_none">Отсутствует</label>
-			<input type="radio" style="display: none;" name="question2" id="question2_none" checked="checked" value="" />
-				</div>
-	</fieldset>
-	<input type="hidden" name="answer_limit_keys_2" value="" />
-							</div>
-										<span class="pages_count">
-					2 из 4					</span>
-								</section>
-								<section class="qsm-page qsm-question-page  qsm-page-3"
-						data-pid="3" data-qpid="3" data-prevbtn="0" style='display: none;'>
-														<div class='quiz_section qsm-question-wrapper question-type-0 question-section-id-4 ' data-qid='4'>
-											<span class='mlw_qmn_question_number'>3.&nbsp;</span>
-								<div class='mlw_qmn_new_question'>Когда планируется запуск продукта в новой упаковке? </div>
-			<div class='mlw_qmn_question  qsm_remove_bold' >
-		<p></p>
-	</div>
-		<fieldset>
-		<legend></legend>
-	<div class='qmn_radio_answers '>
-								<div class="qmn_mc_answer_wrap  mrq_checkbox_class" id="question4-1 ">
-											<input type='radio' class='qmn_quiz_radio qmn-multiple-choice-input ' name="question4" id="question4_1" value="0" />
-					<label class="qsm-input-label" for="question4_1">
-					Чем раньше, тем лучше					</label>
-					 				</div>
-											<div class="qmn_mc_answer_wrap  mrq_checkbox_class" id="question4-2 ">
-											<input type='radio' class='qmn_quiz_radio qmn-multiple-choice-input ' name="question4" id="question4_2" value="1" />
-					<label class="qsm-input-label" for="question4_2">
-					В течение 3-х месяцев					</label>
-					 				</div>
-											<div class="qmn_mc_answer_wrap  mrq_checkbox_class" id="question4-3 ">
-											<input type='radio' class='qmn_quiz_radio qmn-multiple-choice-input ' name="question4" id="question4_3" value="2" />
-					<label class="qsm-input-label" for="question4_3">
-					Не знаю					</label>
-					 				</div>
-											<div class="qmn_mc_answer_wrap  mrq_checkbox_class" id="question4-4 ">
-											<input type='radio' class='qmn_quiz_radio qmn-multiple-choice-input ' name="question4" id="question4_4" value="3" />
-					<label class="qsm-input-label" for="question4_4">
-					В течение месяца					</label>
-					 				</div>
-											<div class="qmn_mc_answer_wrap  mrq_checkbox_class" id="question4-5 ">
-											<input type='radio' class='qmn_quiz_radio qmn-multiple-choice-input ' name="question4" id="question4_5" value="4" />
-					<label class="qsm-input-label" for="question4_5">
-					В течение года					</label>
-					 				</div>
-					 			<label style="display: none !important;" for="question4_none">Отсутствует</label>
-			<input type="radio" style="display: none;" name="question4" id="question4_none" checked="checked" value="" />
-				</div>
-	</fieldset>
-	<input type="hidden" name="answer_limit_keys_4" value="" />
-							</div>
-										<span class="pages_count">
-					3 из 4					</span>
-								</section>
-								<section class="qsm-page qsm-question-page  qsm-page-4"
-						data-pid="4" data-qpid="4" data-prevbtn="0" style='display: none;'>
-														<div class='quiz_section qsm-question-wrapper question-type-4 question-section-id-5 ' data-qid='5'>
-											<span class='mlw_qmn_question_number'>4.&nbsp;</span>
-								<div class='mlw_qmn_new_question'>Потребуется ли вам дополнительно (выберите несколько): </div>
-			<div class='mlw_qmn_question  qsm_remove_bold' >
-		<p></p>
-	</div>
-		<fieldset>
-		<legend></legend>
-	<div class="qmn_check_answers ">
-							<div class="qsm_check_answer  mrq_checkbox_class">
-						<input type="checkbox" class="qsm-multiple-response-input"  name="question5[]" id="question5_1" value="0" />
-						<label class="qsm-input-label" for="question5_1">
-							Разработка и адаптация дизайна						</label>
-					</div>
-										<div class="qsm_check_answer  mrq_checkbox_class">
-						<input type="checkbox" class="qsm-multiple-response-input"  name="question5[]" id="question5_2" value="1" />
-						<label class="qsm-input-label" for="question5_2">
-							Консультация или помощь в наладке оборудования						</label>
-					</div>
-										<div class="qsm_check_answer  mrq_checkbox_class">
-						<input type="checkbox" class="qsm-multiple-response-input"  name="question5[]" id="question5_3" value="2" />
-						<label class="qsm-input-label" for="question5_3">
-							Консультация по техническим нюансам для выбора упаковки						</label>
-					</div>
-										<div class="qsm_check_answer  mrq_checkbox_class">
-						<input type="checkbox" class="qsm-multiple-response-input"  name="question5[]" id="question5_4" value="3" />
-						<label class="qsm-input-label" for="question5_4">
-							Не знаю						</label>
-					</div>
-						</div>
-	</fieldset>
-	<input type="hidden" name="answer_limit_keys_5" value="" />
-							</div>
-										<span class="pages_count">
-					4 из 4					</span>
-								</section>
-							<section class="qsm-page" style="display: none;">
-				<div class="quiz_section">
-					<div class='qsm-after-message mlw_qmn_message_end'>
-											</div>
-										<div class="qsm_contact_div qsm-contact-type-text">
-											<span class='mlw_qmn_question qsm_question'><label for="contact_field_0">Ваше имя</label></span>
-								<input type='text' class='mlwRequiredText qsm_required_text'  name='contact_field_0' id='contact_field_0'  value=''  placeholder='Ваше имя'  />
-									</div>
-										<div class="qsm_contact_div qsm-contact-type-text">
-											<span class='mlw_qmn_question qsm_question'><label for="contact_field_3">Ваш номер</label></span>
-								<input type='text' class='mlwRequiredText qsm_required_textmlwPhoneNumber'  name='contact_field_3' id='contact_field_3'  value=''  onkeydown='return event.keyCode !== 69'  placeholder='Ваш номер'  />
-									</div>
-									</div>
-							</section>
-					<input type="hidden" name="qmn_question_list" value="1Q2Q4Q5Q" />
-							<div id="mlw_error_message_bottom" class="qsm-error-message qmn_error_message_section"></div>
-					<input type="hidden" name="qmn_all_questions_count" id="qmn_all_questions_count" value="4" />
-					<input type="hidden" name="total_questions" id="total_questions" value="4" />
-					<input type="hidden" name="timer" id="timer" value="0" />
-					<input type="hidden" name="timer_ms" id="timer_ms" value="0"/>
-					<input type="hidden" class="qmn_quiz_id" name="qmn_quiz_id" id="qmn_quiz_id" value="1" />
-					<input type='hidden' name='complete_quiz' value='confirmation' />
-									</form>
-						</div>
-		<div style="display: none;" class="qsm-popup qsm-popup-slide" id="modal-4" aria-hidden="false"><div class="qsm-popup__overlay" tabindex="-1" data-micromodal-close=""><div class="qsm-popup__container qmn_quiz_container" role="dialog" aria-modal="true"><div class="qsm-popup__content"><img loading="lazy" src="wp-content/plugins/quiz-master-next/assets/clock.png" alt="clock.png"/><p class="qsm-time-up-text"> Время вышло</p></div><footer class="qsm-popup__footer"><button class="qsm-popup-secondary-button qmn_btn" data-micromodal-close="" aria-label="Close this dialog window" onclick="location.reload();">Отменить</button></footer></div></div></div>				</div>
-			</div>
-		</div>
-	</div>
-
 	<!-- Scripts -->
 	<script src="wp-content/themes/Simple&#32;WP/js/app.js"></script>
 	<script src="wp-content/themes/Simple&#32;WP/js/jquery-3.4.1.min.js"></script>
 	<script src="wp-content/themes/Simple&#32;WP/js/jquery.fancybox.min.js"></script>
-	<script src="wp-content/themes/Simple&#32;WP/js/script.my.js"></script>
+
+	<!-- Popups and forms removed (frontend only) -->
+
 
 	<script>
 	document.addEventListener('DOMContentLoaded', function() {
