@@ -419,12 +419,24 @@ body {
 
 .products__text {
   padding: 0 16px 16px;
+  text-align: center;
 }
 
 .products__text p {
   color: var(--text-dark);
   font-weight: 700;
   letter-spacing: 0.01em;
+}
+
+.products__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products__image img {
+  object-fit: contain !important;
+  object-position: center !important;
 }
 
 /* --- Documents Section --- */
