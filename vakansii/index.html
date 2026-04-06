@@ -82,7 +82,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 </head>
 <body style="overflow-x: hidden;">
-	<div class="wrapper">
+	<div class="site-warning" style="position:fixed;top:0;left:0;right:0;z-index:9999;background:#f59e0b;color:#000;text-align:center;padding:10px 16px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.02em;">Сайт находится в процессе редактирования</div>
+	<div class="wrapper" style="margin-top:40px;">
 		<header class="header header__another">
 			<div class="header__container">
 				<div class="header__body">
@@ -105,12 +106,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 								<li><a href="../index.html#reviews" class="menu__link text-14 bold">Отзывы</a></li>
 								<li><a href="../index.html#contacts" class="menu__link text-14 bold">Контакты</a></li>
 							</ul>
-							<a data-popup="#perezvonite" class="button">Перезвоните мне</a>
 						</nav>
 					</div>
 					<div class="header__contacts">
 						<a href="tel:" class="phone text-18 bold">+7 (49232) 7-54-18</a>
-						<a data-popup="#perezvonite" class="button">Перезвоните мне</a>
 					</div>
 				</div>
 			</div>
@@ -238,17 +237,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				</div>
 				<div class="footer__date __container" style="text-align: center;margin-top: 20px;">
 					<p style="color: #727272;font-size: 12px;line-height: 100%;font-family: 'Montserrat';font-weight:500;">© 2026 АРГО</p>
-					<div class="sait" style="text-align: end;color: #727272;font-family: 'Montserrat';font-weight: 500;line-height: 25px;">
-					Сайт создан: <a href="https://lab-web.net/" target="_blanck" style="text-decoration: underline;">lab-web.net</a>
-				</div>
 				</div>
 			</div>
 		</footer>
-	</div>
-	<div class="qwiz__icons">
-		<a data-popup="#qwiz_opros" class="text-14">
-					<img src="../wp-content/themes/Simple&#32;WP/img/icons/qwiz.png" alt="">
-		<span>Рассчитать стоимость</span></a>
 	</div>
 	<div id="perezvonite" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">

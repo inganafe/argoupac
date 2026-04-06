@@ -1196,6 +1196,7 @@ body {
 .stats__section {
   background: linear-gradient(135deg, #0f2347 0%, #1a3f7a 100%);
   padding: 60px 0;
+  margin-top: 80px;
   position: relative;
   overflow: hidden;
 }
