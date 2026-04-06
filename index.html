@@ -130,12 +130,13 @@
 			border-color: white !important;
 		}
 
-		/* Swiper overflow fix */
-		.reviews__body.swiper,
-		.advantages__right.swiper,
-		.about__right.swiper,
-		.diplom__right.swiper {
+		/* Swiper overflow fix — grid items need min-width:0 so Swiper can measure */
+		.reviews__body,
+		.advantages__right,
+		.about__right,
+		.diplom__right {
 			overflow: hidden;
+			min-width: 0;
 		}
 
 		/* Map interactions */
