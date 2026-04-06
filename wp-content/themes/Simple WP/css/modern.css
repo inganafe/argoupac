@@ -80,23 +80,23 @@ body {
   border-bottom: 1px solid rgba(226, 235, 249, 0.5);
 }
 
-/* Top state: white text on hero */
+/* Default state: dark text */
 .header .menu__link {
-  color: #fff;
+  color: var(--text-dark);
 }
 
 .header .header__logo h1 {
-  color: #fff;
+  color: var(--text-dark);
 }
 
 .header .phone {
-  color: #fff;
+  color: var(--text-dark);
 }
 
 .header .icon-menu span,
 .header .icon-menu::before,
 .header .icon-menu::after {
-  background-color: #fff !important;
+  background-color: var(--text-dark) !important;
 }
 
 /* Scrolled state: dark text on glass */
@@ -776,15 +776,14 @@ body {
 }
 
 .header:not(._header-scroll) .header__contacts .button {
-  background: rgba(255, 255, 255, 0.15) !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
-  backdrop-filter: blur(8px);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+  border: none !important;
   color: #fff !important;
-  box-shadow: none;
+  box-shadow: 0 3px 12px rgba(26, 86, 219, 0.25);
 }
 
 .header:not(._header-scroll) .header__contacts .button:hover {
-  background: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 5px 16px rgba(26, 86, 219, 0.35);
 }
 
 /* --- Selection color --- */
