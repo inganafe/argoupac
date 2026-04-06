@@ -954,6 +954,17 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	<script src="wp-content/themes/Simple&#32;WP/js/jquery-3.4.1.min.js"></script>
 	<script src="wp-content/themes/Simple&#32;WP/js/jquery.fancybox.min.js"></script>
 	<script src="wp-content/themes/Simple&#32;WP/js/script.my.js"></script>
+	<script>
+	document.addEventListener('DOMContentLoaded',function(){
+		var map=document.querySelector('.contacts__map');
+		if(map){
+			map.addEventListener('click',function(){map.classList.add('map-active')});
+			document.addEventListener('click',function(e){
+				if(!map.contains(e.target))map.classList.remove('map-active');
+			});
+		}
+	});
+	</script>
 </body>
 
 </html>

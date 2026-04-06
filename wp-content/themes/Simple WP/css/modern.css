@@ -523,6 +523,11 @@ body {
 
 .contacts__body iframe {
   border-radius: var(--radius-xl);
+  pointer-events: none;
+}
+
+.contacts__map.map-active iframe {
+  pointer-events: auto;
 }
 
 .contacts__map,
