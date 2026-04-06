@@ -1208,7 +1208,7 @@ body {
 .stats__section {
   background: linear-gradient(135deg, #0f2347 0%, #1a3f7a 100%);
   padding: 60px 0;
-  margin-top: 80px;
+  margin-top: 0;
   position: relative;
   overflow: hidden;
 }
@@ -1374,4 +1374,60 @@ body {
   background: #f59e0b !important;
   color: #fff !important;
   border-color: #f59e0b !important;
+}
+
+/* ============================================
+   SECTION ENTRANCE ANIMATIONS
+   ============================================ */
+.products__item,
+.advantages__item,
+.documents__item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.products__item:nth-child(1) { animation-delay: 0.1s; }
+.products__item:nth-child(2) { animation-delay: 0.2s; }
+.products__item:nth-child(3) { animation-delay: 0.3s; }
+.products__item:nth-child(4) { animation-delay: 0.4s; }
+.products__item:nth-child(5) { animation-delay: 0.5s; }
+.products__item:nth-child(6) { animation-delay: 0.6s; }
+
+/* ============================================
+   SECTION DIVIDERS
+   ============================================ */
+.products__section::before,
+.advantages__section::before,
+.about__section::before,
+.documents__section::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  border-radius: 2px;
+  margin: 0 auto 40px;
+}
+
+/* ============================================
+   PRODUCTS GRID - EQUAL HEIGHT CARDS
+   ============================================ */
+.products__body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.products__item a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.products__text {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
