@@ -81,11 +81,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel='stylesheet' id='jquery-ui-slider-rtl-css-css' href='wp-content/plugins/quiz-master-next/css/jquery.ui.slider-rtl.css@ver=10.3.5.css' type='text/css' media='all' />
 
 </head>
-<body style="overflow-x: hidden;">
-	<div class="site-warning" style="position:fixed;top:0;left:0;right:0;z-index:9999;background:#f59e0b;color:#000;text-align:center;padding:10px 16px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.02em;">
-		Сайт находится в процессе редактирования
-	</div>
-	<div class="wrapper" style="margin-top:40px;">
+<body>
+	<div class="wrapper">
 		<header class="header ">
 			<div class="header__container">
 				<div class="header__body">
@@ -123,6 +120,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 
 <section class="main__section">
+	<video class="hero-video" autoplay muted loop playsinline>
+		<source src="https://videos.pexels.com/video-files/4177966/4177966-hd_1920_1080_30fps.mp4" type="video/mp4">
+	</video>
 	<div class="main__container">
 		<div class="main__body">
 			<span class="text-14">29 лет на рынке | 50+ регионов | Проверенное качество</span>
@@ -288,7 +288,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>ООО &laquo;АРГО&raquo; &mdash; ваша упаковка в надёжных руках: опыт, профессионализм и технологии, проверенные временем.</p>
 				</div>
 				<div class="about__button">
-					<a data-popup="#qwiz_start" class="more">Запросить коммераческое предложение</a>
+					<a data-popup="#qwiz_start" class="more">Запросить коммерческое предложение</a>
 				</div>
 			</div>
 			<div class="about__right">
@@ -528,11 +528,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 						<li><a href="index.html#contacts" class="menu__link text-14 bold">Контакты</a></li>
 					</ul>
 					<div class="footer__contacts">
-						<a href="tel:" class="phone text-18 bold"></a>
+						<a href="tel:+74923275418" class="phone text-18 bold">+7 (49232) 7-54-18</a>
 					</div>
 				</div>
 				<div class="footer__date __container" style="text-align: center;margin-top: 20px;">
-					<p style="color: #727272;font-size: 12px;line-height: 100%;font-family: 'Montserrat';font-weight:500;">© 2026 АРГО</p>
+					<p style="color: #64748B;font-size: 12px;line-height: 1.4;font-family: 'Montserrat';font-weight:500;">© 2026 ООО «АРГО» — Завод по производству полимерной упаковки</p>
 				</div>
 			</div>
 		</footer>
@@ -1024,25 +1024,30 @@ var qmn_ajax_object = {"site_url":"https://argoupac.ru","ajaxurl":"https://argou
 <script type="text/javascript" src="wp-content/plugins/quiz-master-next/js/qsm-common.js@ver=10.3.5" id="qsm_common-js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  /* Scroll reveal with staggered animation */
   var targets = document.querySelectorAll('.products__item, .advantages__item, .documents__item, .diplom__item, .reviews__item, .about__left, .about__right, .contacts__block, .stats__item, .mission__image, .mission__content');
-  targets.forEach(function(el) {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s cubic-bezier(0.4,0,0.2,1), transform 0.6s cubic-bezier(0.4,0,0.2,1)';
-  });
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry, i) {
-      if (entry.isIntersecting) {
-        var delay = Array.prototype.indexOf.call(entry.target.parentElement.children, entry.target) * 100;
-        setTimeout(function() {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }, Math.min(delay, 400));
-        observer.unobserve(entry.target);
-      }
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduced) {
+    targets.forEach(function(el) {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1)';
     });
-  }, { threshold: 0.1 });
-  targets.forEach(function(el) { observer.observe(el); });
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var siblings = entry.target.parentElement.children;
+          var idx = Array.prototype.indexOf.call(siblings, entry.target);
+          setTimeout(function() {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, Math.min(idx * 80, 320));
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    targets.forEach(function(el) { observer.observe(el); });
+  }
 });
 </script>
  
