@@ -8,14 +8,14 @@ Author URI: https://vk.com/vinoff.andrey;
 
 /* Brand Colors and Design Tokens */
 :root {
-  --primary-color: #1E40AF;
-  --secondary-color: #3B82F6;
-  --accent-color: #10B981;
-  --neutral-color: #6B7280;
-  --text-color: #374151;
-  --bg-color: #FFFFFF;
-  --light-bg: #F9FAFB;
-  --border-color: #E5E7EB;
+  --primary-color: #0F172A;
+  --secondary-color: #64748B;
+  --accent-color: #F59E0B;
+  --neutral-color: #475569;
+  --text-color: #FFFFFF;
+  --bg-color: #1E293B;
+  --light-bg: #334155;
+  --border-color: #475569;
 }
 
 /* Typography */
@@ -476,30 +476,46 @@ input[type=submit] {
 
 /* Redesign Styles */
 .main__section {
-  background: var(--bg-color);
+  background: linear-gradient(135deg, var(--primary-color), var(--bg-color));
   color: var(--text-color);
-  padding: 120px 0;
+  padding: 150px 0;
   text-align: center;
-  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.main__section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23F59E0B" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23F59E0B" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.1;
 }
 
 .main__section .text-14 {
   color: var(--accent-color);
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .main__section .title-35 {
-  color: var(--primary-color);
-  font-size: 3.5rem;
-  font-weight: 700;
+  color: var(--accent-color);
+  font-size: 4rem;
+  font-weight: 900;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .main__section .text-18 {
   color: var(--text-color);
   font-size: 1.25rem;
   margin-bottom: 40px;
+  font-weight: 500;
 }
 
 .main__button {
@@ -510,79 +526,81 @@ input[type=submit] {
 }
 
 .button {
-  background: var(--primary-color);
-  border: 2px solid var(--primary-color);
-  color: white;
-  padding: 15px 30px;
+  background: linear-gradient(135deg, var(--secondary-color), var(--neutral-color));
+  border: 2px solid var(--accent-color);
+  color: var(--text-color);
+  padding: 18px 35px;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
+  border-radius: 0;
+  font-weight: 700;
   transition: all 0.3s ease;
   display: inline-block;
-  box-shadow: 0 2px 4px rgba(30, 64, 175, 0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .button:hover {
-  background: var(--secondary-color);
-  border-color: var(--secondary-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2);
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(245, 158, 11, 0.3);
 }
 
 .opacity {
   background: transparent;
-  color: var(--primary-color);
-  border-color: var(--primary-color);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .opacity:hover {
-  background: var(--primary-color);
-  color: white;
+  background: var(--accent-color);
+  color: var(--primary-color);
 }
 
 .about__section {
   background: var(--light-bg);
-  padding: 80px 0;
-  border-top: 1px solid var(--border-color);
+  padding: 100px 0;
+  border-top: 2px solid var(--accent-color);
 }
 
 .why__section {
-  padding: 80px 0;
+  padding: 100px 0;
   background: var(--bg-color);
-  border-top: 1px solid var(--border-color);
+  border-top: 2px solid var(--accent-color);
 }
 
 .products__section {
   background: var(--light-bg);
-  padding: 80px 0;
-  border-top: 1px solid var(--border-color);
+  padding: 100px 0;
+  border-top: 2px solid var(--accent-color);
 }
 
 .documents__section, .diplomas__section, .reviews__section {
-  padding: 80px 0;
+  padding: 100px 0;
   background: var(--bg-color);
-  border-top: 1px solid var(--border-color);
+  border-top: 2px solid var(--accent-color);
 }
 
 .contacts__section {
   background: var(--light-bg);
-  padding: 80px 0;
-  border-top: 1px solid var(--border-color);
+  padding: 100px 0;
+  border-top: 2px solid var(--accent-color);
 }
 
 .footer {
   background: var(--primary-color);
-  color: white;
-  padding: 40px 0;
-  border-top: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 60px 0;
+  border-top: 4px solid var(--accent-color);
 }
 
 .footer a {
-  color: white;
+  color: var(--accent-color);
 }
 
 .footer__date p {
-  color: white;
+  color: var(--text-color);
 }
 
 /* Responsive */
