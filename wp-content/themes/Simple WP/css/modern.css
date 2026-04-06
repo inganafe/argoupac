@@ -223,6 +223,7 @@ body {
 /* --- Hero Section --- */
 .main__section {
   position: relative;
+  margin-bottom: 60px;
 }
 
 .main__section::after {
