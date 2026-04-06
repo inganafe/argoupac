@@ -478,11 +478,28 @@ input[type=submit] {
 
 /* Redesign Styles */
 .main__section {
-  background: var(--bg-main);
+  background: var(--bg-main) url('wp-content/uploads/2023/09/a34f9f_8df2114a236e455eb51c5452c32c59e4mv2.png') no-repeat center center;
+  background-size: cover;
   color: var(--text-primary);
   padding: 120px 0;
   text-align: center;
-  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.main__section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+}
+
+.main__section > * {
+  position: relative;
+  z-index: 2;
 }
 
 .main__section .text-14 {
