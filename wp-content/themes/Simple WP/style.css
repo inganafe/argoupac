@@ -6,6 +6,25 @@ Author: Andrey Vinogradov (Bifol Group)
 Author URI: https://vk.com/vinoff.andrey;
 */
 
+/* Brand Colors and Design Tokens */
+:root {
+  --primary-color: #003366;
+  --secondary-color: #006600;
+  --accent-color: #FFD700;
+  --neutral-color: #6b7280;
+  --text-color: #252525;
+  --bg-color: #ffffff;
+  --light-bg: #f8f9fa;
+  --border-color: #e5e7eb;
+}
+
+/* Typography */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
 /* Styles go below */
 .header__another {
 		background: none;
@@ -453,4 +472,121 @@ input[type=submit] {
 
 .header__another .icon-menu span, .header__another .icon-menu::before, .header__another .icon-menu::after {
 	background-color: #000;
+}
+
+/* Redesign Styles */
+.main__section {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.main__section .text-14 {
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.main__section .title-35 {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.main__section .text-18 {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+}
+
+.main__button {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  background: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.button:hover {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 102, 0, 0.3);
+}
+
+.opacity {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+.opacity:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+.about__section {
+  background: var(--light-bg);
+  padding: 80px 0;
+}
+
+.why__section {
+  padding: 80px 0;
+  background: white;
+}
+
+.products__section {
+  background: var(--light-bg);
+  padding: 80px 0;
+}
+
+.documents__section, .diplomas__section, .reviews__section {
+  padding: 80px 0;
+}
+
+.contacts__section {
+  background: var(--light-bg);
+  padding: 80px 0;
+}
+
+.footer {
+  background: var(--primary-color);
+  color: white;
+  padding: 40px 0;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer__date p {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main__section .title-35 {
+    font-size: 2.5rem;
+  }
+  .main__button {
+    flex-direction: column;
+    align-items: center;
+  }
+  .button {
+    width: 100%;
+    max-width: 300px;
+  }
 }
