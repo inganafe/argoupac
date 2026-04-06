@@ -285,27 +285,66 @@ body {
 /* ===========================================
    7. STATS SECTION
    =========================================== */
-.stats__section { background: var(--bg-primary); position: relative; z-index: 4; }
+.stats__section {
+  background: var(--bg-primary); position: relative; z-index: 4;
+  padding: 60px 0;
+}
 .stats__body {
-  border-radius: var(--radius-xl); background: var(--bg-primary);
-  box-shadow: var(--shadow-lg); border: 1px solid var(--border-light);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
-.stats__item { text-align: center; position: relative; }
-.stats__item::after {
-  content: ''; position: absolute; right: 0; top: 20%;
-  height: 60%; width: 1px; background: var(--border-light);
+.stats__item {
+  text-align: center; position: relative;
+  padding: 32px 20px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition);
 }
-.stats__item:last-child::after { display: none; }
+.stats__item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-100);
+}
+.stats__icon {
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  width: 56px; height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--primary-50);
+  color: var(--primary);
+  margin-bottom: 16px;
+  transition: all var(--transition);
+}
+.stats__item:hover .stats__icon {
+  background: var(--primary);
+  color: var(--text-white);
+  transform: scale(1.05);
+}
 .stats__number {
   color: var(--primary) !important; font-weight: var(--font-display) !important;
   letter-spacing: -0.03em; display: block; line-height: 1;
+  font-size: 36px !important;
+  margin-bottom: 6px;
 }
 .stats__label {
   color: var(--text-muted) !important; font-weight: var(--font-medium) !important;
   text-transform: uppercase; letter-spacing: 0.06em; font-size: 11px !important;
   display: block; margin-top: 8px;
+  line-height: 1.4;
 }
-@media (max-width: 600px) { .stats__item::after { display: none; } }
+@media (max-width: 768px) {
+  .stats__body { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .stats__number { font-size: 28px !important; }
+}
+@media (max-width: 480px) {
+  .stats__body { grid-template-columns: 1fr; gap: 12px; }
+  .stats__item { padding: 24px 16px; }
+}
 
 /* ===========================================
    8. ABOUT SECTION
