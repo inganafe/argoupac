@@ -4,7 +4,12 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)",
-      "Bash(start chrome:*)"
+      "Bash(start chrome:*)",
+      "Bash(find . -name \"*.html\" -exec grep -c '<img ' {} +)",
+      "Bash(grep -v ':0$')",
+      "Bash(sort -t: -k2 -rn)",
+      "Bash(find . -name \"*.html\" -exec sed -i 's/<img loading=\"lazy\" loading=\"lazy\"/<img loading=\"lazy\"/g' {} +)",
+      "Bash(find . -name \"*.html\" -exec sed -i '/logo\\\\.png/s/loading=\"lazy\" //' {} +)"
     ]
   }
 }
