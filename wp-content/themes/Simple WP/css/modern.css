@@ -165,13 +165,8 @@
 .header .icon-menu span,
 .header .icon-menu::before,
 .header .icon-menu::after {
-  background-color: #FFFFFF !important;
-  transition: background-color 0.3s;
-}
-.header._header-scroll .icon-menu span,
-.header._header-scroll .icon-menu::before,
-.header._header-scroll .icon-menu::after {
   background-color: #0F172A !important;
+  transition: background-color 0.3s;
 }
 
 /* ===========================================

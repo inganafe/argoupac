@@ -286,7 +286,7 @@
 			<h3 class="title-28">Не нашли нужный товар?</h3>
 			<p class="text-14">Свяжитесь с нами и мы подберем оптимальное решение для вашего бизнеса</p>
 		</div>
-		<a data-popup="#zayav" class="button long">Оставить заявку</a>
+		<a href="../index.html#contacts" class="button long">Связаться с нами</a>
 	</div>
 </div>
 
@@ -298,7 +298,7 @@
 			<div class="contacts__container">
 				<div class="contacts__body">
 					<div class="contacts__map">
-						<div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/10658/vladimir-oblast/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Владимирская область</a><a href="https://yandex.ru/maps/10658/vladimir-oblast/house/zarechenskaya_ulitsa_176/YEgYdAFiT00DQFtsfX94d35gbQ==/?ll=41.262685%2C56.396239&utm_medium=mapframe&utm_source=maps&z=17" style="color:#eee;font-size:12px;position:absolute;top:14px;">Зареченская улица, 176 на карте Владимирской области — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=41.262685%2C56.396239&mode=whatshere&whatshere%5Bpoint%5D=41.262684%2C56.396239&whatshere%5Bzoom%5D=17&z=17" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+						<div style="position:relative;overflow:hidden;"><iframe src="https://yandex.ru/map-widget/v1/?ll=41.262685%2C56.396239&mode=whatshere&whatshere%5Bpoint%5D=41.262684%2C56.396239&whatshere%5Bzoom%5D=17&z=17" width="560" height="400" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div>
 					</div>
 
 					<div class="contacts__block">
@@ -318,7 +318,7 @@
 							</a>
 						</div>
 						<div class="contacts__button">
-							<a data-popup="#zayav" class="button long">Оставить заявку</a>
+							<a href="tel:+74923275418" class="button long">Позвонить нам</a>
 						</div>
 					</div>
 				</div>
@@ -763,10 +763,19 @@
 		</div>
 	</div>
 	<script src="../wp-content/themes/Simple&#32;WP/js/app.js"></script>
-
 	<script src="../wp-content/themes/Simple&#32;WP/js/jquery-3.4.1.min.js"></script>
 	<script src="../wp-content/themes/Simple&#32;WP/js/jquery.fancybox.min.js"></script>
-	<script src="../wp-content/themes/Simple&#32;WP/js/script.my.js"></script>
+	<script>
+	document.addEventListener('DOMContentLoaded',function(){
+		var map=document.querySelector('.contacts__map');
+		if(map){
+			map.addEventListener('click',function(){map.classList.add('map-active')});
+			document.addEventListener('click',function(e){
+				if(!map.contains(e.target))map.classList.remove('map-active');
+			});
+		}
+	});
+	</script>
 </body>
 
 </html>

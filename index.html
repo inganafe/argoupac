@@ -130,6 +130,14 @@
 			border-color: white !important;
 		}
 
+		/* Swiper overflow fix */
+		.reviews__body.swiper,
+		.advantages__right.swiper,
+		.about__right.swiper,
+		.diplom__right.swiper {
+			overflow: hidden;
+		}
+
 		/* Map interactions */
 		.contacts__map iframe { pointer-events: none; }
 		.contacts__map.map-active iframe { pointer-events: auto; }
@@ -299,12 +307,12 @@
 	<div class="wrapper min-h-screen flex flex-col overflow-hidden">
 
 		<!-- HEADER -->
-		<header id="header" class="header fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+		<header id="header" class="header fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl shadow-sm border-b border-slate-200/50">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="header__body flex items-center justify-between h-20">
 					<a href="index.html" class="header__logo flex items-center gap-3 group">
 						<img src="wp-content/themes/Simple&#32;WP/img/header/logo.png" alt="АРГО" class="h-10 w-auto">
-						<h1 class="text-xl font-bold tracking-tight text-white group-hover:text-accent-300 transition-colors">Арго</h1>
+						<h1 class="text-xl font-bold tracking-tight text-slate-900 group-hover:text-brand-500 transition-colors">Арго</h1>
 					</a>
 
 					<div class="header__menu menu">
@@ -313,18 +321,18 @@
 						</div>
 						<nav class="menu__body">
 							<ul class="menu__list flex flex-col lg:flex-row gap-1 lg:gap-6">
-								<li><a href="catalog-produkcii/index.html" class="menu__link text-[13px] font-semibold uppercase tracking-wider text-white/80 hover:text-white transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-accent-400 after:rounded after:transition-all hover:after:w-full">Наша продукция</a></li>
-								<li><a href="index.html#adven" class="menu__link text-[13px] font-semibold uppercase tracking-wider text-white/80 hover:text-white transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-accent-400 after:rounded after:transition-all hover:after:w-full">Производство</a></li>
-								<li><a href="vakansii/index.html" class="menu__link text-[13px] font-semibold uppercase tracking-wider text-white/80 hover:text-white transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-accent-400 after:rounded after:transition-all hover:after:w-full">Вакансии</a></li>
-								<li><a href="novosti/index.html" class="menu__link text-[13px] font-semibold uppercase tracking-wider text-white/80 hover:text-white transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-accent-400 after:rounded after:transition-all hover:after:w-full">Новости</a></li>
-								<li><a href="index.html#reviews" class="menu__link text-[13px] font-semibold uppercase tracking-wider text-white/80 hover:text-white transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-accent-400 after:rounded after:transition-all hover:after:w-full">Отзывы</a></li>
-								<li><a href="index.html#contacts" class="menu__link text-[13px] font-semibold uppercase tracking-wider text-white/80 hover:text-white transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-accent-400 after:rounded after:transition-all hover:after:w-full">Контакты</a></li>
+								<li><a href="catalog-produkcii/index.html" class="menu__link text-[13px] font-semibold uppercase tracking-wider text-slate-600 hover:text-brand-500 transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-brand-500 after:rounded after:transition-all hover:after:w-full">Наша продукция</a></li>
+								<li><a href="index.html#adven" class="menu__link text-[13px] font-semibold uppercase tracking-wider text-slate-600 hover:text-brand-500 transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-brand-500 after:rounded after:transition-all hover:after:w-full">Производство</a></li>
+								<li><a href="vakansii/index.html" class="menu__link text-[13px] font-semibold uppercase tracking-wider text-slate-600 hover:text-brand-500 transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-brand-500 after:rounded after:transition-all hover:after:w-full">Вакансии</a></li>
+								<li><a href="novosti/index.html" class="menu__link text-[13px] font-semibold uppercase tracking-wider text-slate-600 hover:text-brand-500 transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-brand-500 after:rounded after:transition-all hover:after:w-full">Новости</a></li>
+								<li><a href="index.html#reviews" class="menu__link text-[13px] font-semibold uppercase tracking-wider text-slate-600 hover:text-brand-500 transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-brand-500 after:rounded after:transition-all hover:after:w-full">Отзывы</a></li>
+								<li><a href="index.html#contacts" class="menu__link text-[13px] font-semibold uppercase tracking-wider text-slate-600 hover:text-brand-500 transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-brand-500 after:rounded after:transition-all hover:after:w-full">Контакты</a></li>
 							</ul>
 						</nav>
 					</div>
 
 					<div class="header__contacts hidden md:flex items-center gap-5">
-						<a href="tel:+74923275418" class="phone text-lg font-bold text-white hover:text-accent-300 transition-colors tracking-wide hidden lg:block">+7 (49232) 7-54-18</a>
+						<a href="tel:+74923275418" class="phone text-lg font-bold text-slate-900 hover:text-brand-500 transition-colors tracking-wide hidden lg:block">+7 (49232) 7-54-18</a>
 					</div>
 				</div>
 			</div>
@@ -334,9 +342,6 @@
 
 			<!-- HERO SECTION -->
 			<section class="main__section relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-[90vh] flex items-center bg-slate-900 overflow-hidden" style="background-image:url('wp-content/themes/Simple%20WP/img/header/back.png');background-size:cover;background-position:center;">
-				<video class="hero-video" autoplay muted loop playsinline>
-					<source src="wp-content/uploads/brand/hero.mp4" type="video/mp4">
-				</video>
 				<!-- Overlay -->
 				<div class="absolute inset-0 bg-black/30 z-[1]"></div>
 				<!-- Bottom gradient fade -->
@@ -410,7 +415,7 @@
 					</div>
 					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 reveal">
 						<div class="group">
-							<a href="products/plenka-ingibirovannaya-4.html" class="block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+							<a href="products/plenka-ingibirovannaya-4.html" class="block bg-white rounded-2xl overflow-hidden border border-slate-100 transition-all duration-500">
 								<div class="product-img-wrap bg-slate-50 overflow-hidden flex items-center justify-center">
 									<img loading="lazy" src="wp-content/uploads/products/product-1.jpeg" alt="Фасовочные пакеты" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700">
 								</div>
@@ -420,7 +425,7 @@
 							</a>
 						</div>
 						<div class="group">
-							<a href="products/plenka-ingibirovannaya-3.html" class="block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+							<a href="products/plenka-ingibirovannaya-3.html" class="block bg-white rounded-2xl overflow-hidden border border-slate-100 transition-all duration-500">
 								<div class="product-img-wrap bg-slate-50 overflow-hidden flex items-center justify-center">
 									<img loading="lazy" src="wp-content/uploads/products/product-2.jpeg" alt="Пакеты с петлевой ручкой" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700">
 								</div>
@@ -430,7 +435,7 @@
 							</a>
 						</div>
 						<div class="group">
-							<a href="products/plenka-ingibirovannaya-2-3.html" class="block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+							<a href="products/plenka-ingibirovannaya-2-3.html" class="block bg-white rounded-2xl overflow-hidden border border-slate-100 transition-all duration-500">
 								<div class="product-img-wrap bg-slate-50 overflow-hidden flex items-center justify-center">
 									<img loading="lazy" src="wp-content/uploads/products/product-3.jpeg" alt="Пакеты с вырубной ручкой" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700">
 								</div>
@@ -440,7 +445,7 @@
 							</a>
 						</div>
 						<div class="group">
-							<a href="products/plenka-ingibirovannaya-2-2.html" class="block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+							<a href="products/plenka-ingibirovannaya-2-2.html" class="block bg-white rounded-2xl overflow-hidden border border-slate-100 transition-all duration-500">
 								<div class="product-img-wrap bg-slate-50 overflow-hidden flex items-center justify-center">
 									<img loading="lazy" src="wp-content/uploads/products/product-4.jpeg" alt="Пакеты ПВД" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700">
 								</div>
@@ -450,7 +455,7 @@
 							</a>
 						</div>
 						<div class="group">
-							<a href="products/plenka-ingibirovannaya-2.html" class="block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+							<a href="products/plenka-ingibirovannaya-2.html" class="block bg-white rounded-2xl overflow-hidden border border-slate-100 transition-all duration-500">
 								<div class="product-img-wrap bg-slate-50 overflow-hidden flex items-center justify-center">
 									<img loading="lazy" src="wp-content/uploads/products/product-5.jpeg" alt="Пленка вторичная" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700">
 								</div>
@@ -460,7 +465,7 @@
 							</a>
 						</div>
 						<div class="group">
-							<a href="products/plenka-ingibirovannaya.html" class="block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+							<a href="products/plenka-ingibirovannaya.html" class="block bg-white rounded-2xl overflow-hidden border border-slate-100 transition-all duration-500">
 								<div class="product-img-wrap bg-slate-50 overflow-hidden flex items-center justify-center">
 									<img loading="lazy" src="wp-content/uploads/2023/09/avy.png" alt="Пленка ингибированная" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700">
 								</div>
@@ -691,8 +696,6 @@
 				<div class="contacts-grid grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8 reveal">
 					<div class="contacts__map rounded-3xl overflow-hidden shadow-lg min-h-[400px]">
 						<div style="position:relative;overflow:hidden;height:100%;">
-							<a href="https://yandex.ru/maps/10658/vladimir-oblast/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Владимирская область</a>
-							<a href="https://yandex.ru/maps/10658/vladimir-oblast/house/zarechenskaya_ulitsa_176/YEgYdAFiT00DQFtsfX94d35gbQ==/?ll=41.262685%2C56.396239&utm_medium=mapframe&utm_source=maps&z=17" style="color:#eee;font-size:12px;position:absolute;top:14px;">Зареченская улица, 176</a>
 							<iframe src="https://yandex.ru/map-widget/v1/?ll=41.262685%2C56.396239&mode=whatshere&whatshere%5Bpoint%5D=41.262684%2C56.396239&whatshere%5Bzoom%5D=17&z=17" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative;min-height:400px;border-radius:24px;"></iframe>
 						</div>
 					</div>
@@ -779,35 +782,6 @@
 				if (!map.contains(e.target)) map.classList.remove('map-active');
 			});
 		}
-
-		// Header scroll effect
-		var header = document.getElementById('header');
-		function updateHeader() {
-			if (window.scrollY > 80) {
-				header.classList.add('_header-scroll');
-				header.classList.remove('bg-transparent');
-				header.classList.add('bg-white/95', 'backdrop-blur-xl', 'shadow-sm', 'border-b', 'border-slate-200/50');
-				// Switch text colors to dark
-				header.querySelectorAll('.menu__link, .phone').forEach(function(el) {
-					el.classList.remove('text-white/80', 'text-white');
-					el.classList.add('!text-slate-700');
-				});
-				header.querySelector('.header__logo h1').classList.remove('text-white');
-				header.querySelector('.header__logo h1').classList.add('!text-slate-900');
-			} else {
-				header.classList.remove('_header-scroll');
-				header.classList.add('bg-transparent');
-				header.classList.remove('bg-white/95', 'backdrop-blur-xl', 'shadow-sm', 'border-b', 'border-slate-200/50');
-				header.querySelectorAll('.menu__link, .phone').forEach(function(el) {
-					el.classList.add('text-white/80', 'text-white');
-					el.classList.remove('!text-slate-700');
-				});
-				header.querySelector('.header__logo h1').classList.add('text-white');
-				header.querySelector('.header__logo h1').classList.remove('!text-slate-900');
-			}
-		}
-		window.addEventListener('scroll', updateHeader);
-		updateHeader();
 
 		// Reveal on scroll animation
 		var reveals = document.querySelectorAll('.reveal');
