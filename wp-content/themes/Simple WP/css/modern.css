@@ -457,7 +457,13 @@ body {
    =========================================== */
 .contacts__section { background-color: var(--bg-secondary); }
 .contacts__body { border-radius: var(--radius-xl); overflow: hidden; }
-.contacts__body iframe { border-radius: var(--radius-xl); }
+.contacts__body iframe {
+  border-radius: var(--radius-xl);
+  pointer-events: none;
+}
+.contacts__map.map-active iframe {
+  pointer-events: auto;
+}
 .contacts__map, .contacts__map div { border-radius: var(--radius-xl); }
 .contacts__block {
   background: var(--bg-primary); border-radius: var(--radius-lg);
