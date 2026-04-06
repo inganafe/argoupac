@@ -9,7 +9,15 @@
       "Bash(grep -v ':0$')",
       "Bash(sort -t: -k2 -rn)",
       "Bash(find . -name \"*.html\" -exec sed -i 's/<img loading=\"lazy\" loading=\"lazy\"/<img loading=\"lazy\"/g' {} +)",
-      "Bash(find . -name \"*.html\" -exec sed -i '/logo\\\\.png/s/loading=\"lazy\" //' {} +)"
+      "Bash(find . -name \"*.html\" -exec sed -i '/logo\\\\.png/s/loading=\"lazy\" //' {} +)",
+      "WebSearch",
+      "WebFetch(domain:www.pexels.com)",
+      "WebFetch(domain:pixabay.com)",
+      "Bash(curl -s \"https://api.pexels.com/videos/search?query=plastic+packaging+factory+production+line&per_page=5&orientation=landscape\" -H \"Authorization: gkxZcbHQiTLqSuJqQM1GxLZijOaFCEyDI9jOBLjd6lZqWTHn6i3l0K0g\")",
+      "Bash(python3 -c \" import json,sys data=json.load\\(sys.stdin\\) for v in data.get\\('videos',[]\\): print\\(f\\\\\"ID: {v['id']} | {v['duration']}s | {v.get\\('url',''\\)}\\\\\" \\) for f in v.get\\('video_files',[]\\): if f.get\\('quality'\\)=='hd' and f.get\\('width',0\\)>=1280: print\\(f\\\\\" -> {f['width']}x{f['height']} {f['link']}\\\\\"\\) break \")",
+      "Bash(curl -s \"https://api.pexels.com/videos/search?query=plastic+packaging+factory+production&per_page=5\" -H \"Authorization: gkxZcbHQiTLqSuJqQM1GxLZijOaFCEyDI9jOBLjd6lZqWTHn6i3l0K0g\")",
+      "WebFetch(domain:coverr.co)",
+      "Bash(curl -sI \"https://videos.pexels.com/video-files/852341/852341-hd_1920_1080_30fps.mp4\")"
     ]
   }
 }
