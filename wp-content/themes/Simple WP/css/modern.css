@@ -267,6 +267,7 @@ body {
   padding-left: 0;
   padding-right: 0;
   position: relative;
+  padding-top: 80px !important;
 }
 
 .about__text p {
