@@ -436,11 +436,13 @@ h3 { font-size: 1.25rem; }
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
+  border: 1.5px solid var(--brand);
   box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.3s ease;
 }
 .product-card:hover {
   transform: translateY(-6px);
+  border-color: var(--brand-dark);
   box-shadow: 0 8px 30px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
 }
 
@@ -451,7 +453,7 @@ h3 { font-size: 1.25rem; }
   align-items: center;
   justify-content: center;
   background: #F7F8FA;
-  padding: 24px;
+  padding: 8px;
 }
 
 .product-card-img img {
@@ -499,7 +501,7 @@ h3 { font-size: 1.25rem; }
 /* Product grid responsive — scoped */
 @media (max-width: 768px) {
   .products-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .product-card-img { padding: 20px; }
+  .product-card-img { padding: 8px; }
   .product-card-body { padding: 20px; gap: 12px; }
 }
 @media (max-width: 480px) {
@@ -510,12 +512,14 @@ h3 { font-size: 1.25rem; }
 /* ---- ADVANTAGES ---- */
 
 .advantages-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 24px;
+  justify-content: center;
 }
-
 .advantage-item {
+  flex: 0 1 calc(33.333% - 16px);
+  min-width: 280px;
   padding: 32px;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -534,11 +538,13 @@ h3 { font-size: 1.25rem; }
 }
 
 .advantage-icon {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
   margin-bottom: 20px;
+  transition: transform 0.3s ease;
 }
+.advantage-item:hover .advantage-icon { transform: scale(1.1); }
 
 .advantage-item p {
   font-size: 0.9375rem;
@@ -899,7 +905,7 @@ h3 { font-size: 1.25rem; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .stats { margin-top: -32px; }
 
-  .advantages-grid { grid-template-columns: 1fr; }
+  .advantage-item { flex: 0 1 100%; min-width: 0; }
   .two-col { grid-template-columns: 1fr; gap: 40px; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .docs-grid { grid-template-columns: repeat(2, 1fr); }
