@@ -254,9 +254,8 @@
 						<p>Основанная в 1997 году как семейное предприятие, компания &laquo;АРГО&raquo; прошла путь от небольшого производства пищевой и парниковой плёнки до современного завода полного цикла по выпуску полимерной упаковки.</p>
 						<p>Сегодня мы &mdash; технологичный производитель с мощной технической базой и оптимизированными процессами на всех этапах: от экструзии с печатью до доставки готовой продукции по РФ и СНГ.</p>
 						<p>Наше ключевое преимущество &mdash; высококвалифицированная команда профессионалов, обладающая многолетним опытом в сфере производства полимерной упаковки. Специалисты компании постоянно совершенствуют технологические процессы и внедряют инновационные решения.</p>
-						<p>ООО &laquo;АРГО&raquo; &mdash; ваша упаковка в надёжных руках: опыт, профессионализм и технологии, проверенные временем.</p>
-						<div style="margin-top:32px;">
-							<a href="contacts/index.html" class="btn btn-primary">Связаться с нами</a>
+						<div class="about-highlight">
+							<p>ООО &laquo;АРГО&raquo; ваша упаковка &mdash; в надёжных руках: опыт, профессионализм и технологии, проверенные временем.</p>
 						</div>
 					</div>
 					<div class="two-col-image">
@@ -266,49 +265,43 @@
 			</div>
 		</section>
 
-		<!-- REVIEWS -->
+		<!-- REVIEWS & DIPLOMAS -->
 		<section class="section section-alt" id="reviews">
 			<div class="container">
-				<div class="section-header center reveal">
-					<span class="section-label">Наши клиенты</span>
-					<h2>Отзывы</h2>
-					<div class="section-line" style="margin-left:auto;margin-right:auto;"></div>
-				</div>
-				<div class="gallery-grid reveal">
-					<div class="gallery-item">
-						<img loading="lazy" src="wp-content/uploads/2023/08/1-4.png" alt="Благодарственное письмо от клиента компании АРГО">
+				<div class="trust-grid reveal">
+					<!-- Reviews -->
+					<div class="trust-block">
+						<h2 class="hover-trigger">Отзывы</h2>
+						<div class="section-line"></div>
+						<p style="color:var(--text-secondary);font-size:0.875rem;margin-top:16px;">Ваш надёжный партнёр в упаковке — ООО &laquo;АРГО&raquo;</p>
+						<div class="gallery-grid hover-gallery" style="margin-top:32px;">
+							<div class="gallery-item">
+								<img loading="lazy" src="wp-content/uploads/2023/08/1-4.png" alt="Благодарственное письмо от клиента компании АРГО">
+							</div>
+							<div class="gallery-item">
+								<img loading="lazy" src="wp-content/uploads/2023/09/Blagodarnost.jpeg" alt="Благодарность от партнёра за качественную продукцию">
+							</div>
+							<div class="gallery-item">
+								<img loading="lazy" src="wp-content/uploads/2023/09/ARGO-Blagodarnost.jpg" alt="Благодарственное письмо компании АРГО">
+							</div>
+						</div>
 					</div>
-					<div class="gallery-item">
-						<img loading="lazy" src="wp-content/uploads/2023/09/Blagodarnost.jpeg" alt="Благодарность от партнёра за качественную продукцию">
-					</div>
-					<div class="gallery-item">
-						<img loading="lazy" src="wp-content/uploads/2023/09/ARGO-Blagodarnost.jpg" alt="Благодарственное письмо компании АРГО">
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- DIPLOMAS -->
-		<section class="section">
-			<div class="container">
-				<div class="two-col reveal">
-					<div class="two-col-text">
-						<span class="section-label">Награды</span>
-						<h2>Наши дипломы</h2>
-						<div class="section-line" style="margin-bottom:32px;"></div>
-						<p>Нашу работу по достоинству оценили и мы получили следующие награды.</p>
-					</div>
-					<div></div>
-				</div>
-				<div class="gallery-grid reveal" style="margin-top:40px;">
-					<div class="gallery-item">
-						<img loading="lazy" src="wp-content/uploads/2023/09/4.jpg" alt="Диплом компании АРГО за достижения в производстве">
-					</div>
-					<div class="gallery-item">
-						<img loading="lazy" src="wp-content/uploads/2023/09/7.jpg" alt="Награда АРГО за качество полимерной продукции">
-					</div>
-					<div class="gallery-item">
-						<img loading="lazy" src="wp-content/uploads/2023/09/10.jpg" alt="Сертификат соответствия продукции АРГО">
+					<!-- Diplomas -->
+					<div class="trust-block">
+						<h2 class="hover-trigger">Наши дипломы</h2>
+						<div class="section-line"></div>
+						<p style="color:var(--text-secondary);font-size:0.875rem;margin-top:16px;">Нашу работу по достоинству оценили и мы получили следующие награды.</p>
+						<div class="gallery-grid hover-gallery" style="margin-top:32px;">
+							<div class="gallery-item">
+								<img loading="lazy" src="wp-content/uploads/2023/09/4.jpg" alt="Диплом компании АРГО за достижения в производстве">
+							</div>
+							<div class="gallery-item">
+								<img loading="lazy" src="wp-content/uploads/2023/09/7.jpg" alt="Награда АРГО за качество полимерной продукции">
+							</div>
+							<div class="gallery-item">
+								<img loading="lazy" src="wp-content/uploads/2023/09/10.jpg" alt="Сертификат соответствия продукции АРГО">
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -455,6 +448,25 @@
 		});
 	}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 	reveals.forEach(function(el) { observer.observe(el); });
+
+	// Hover-trigger: title hover reveals gallery
+	document.querySelectorAll('.hover-trigger').forEach(function(trigger) {
+		var block = trigger.closest('.trust-block') || trigger.closest('.container');
+		var gallery = block.querySelector('.hover-gallery');
+		if (!gallery) return;
+
+		trigger.addEventListener('mouseenter', function() {
+			gallery.classList.add('is-visible');
+		});
+		trigger.addEventListener('mouseleave', function() {
+			gallery.classList.remove('is-visible');
+		});
+
+		// Mobile: tap to toggle
+		trigger.addEventListener('click', function() {
+			gallery.classList.toggle('is-visible');
+		});
+	});
 	</script>
 
 </body>

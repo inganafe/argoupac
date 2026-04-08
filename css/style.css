@@ -552,6 +552,24 @@ h3 { font-size: 1.25rem; }
   line-height: 1.5;
 }
 
+/* ---- ABOUT HIGHLIGHT ---- */
+
+.about-highlight {
+  margin-top: 32px;
+  padding: 24px 28px;
+  background: var(--accent);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.about-highlight p {
+  color: var(--text) !important;
+  font-size: 0.9375rem !important;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 0 !important;
+}
+
 /* ---- ABOUT / TWO-COL ---- */
 
 .two-col {
@@ -574,23 +592,81 @@ h3 { font-size: 1.25rem; }
   border: 1px solid var(--border);
 }
 
-/* ---- REVIEWS / DIPLOMAS GRID ---- */
+/* ---- REVIEWS / DIPLOMAS ---- */
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+
+.trust-block {
+  padding: 40px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 16px;
 }
 
 .gallery-item {
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius);
   overflow: hidden;
 }
 
 .gallery-item img {
   width: 100%;
   height: auto;
+}
+
+@media (max-width: 768px) {
+  .trust-grid { grid-template-columns: 1fr; gap: 24px; }
+  .trust-block { padding: 28px; }
+}
+
+/* ---- HOVER REVEAL (Reviews & Diplomas) ---- */
+
+.hover-trigger {
+  cursor: pointer;
+  display: inline-block;
+  transition: color 0.2s;
+}
+.hover-trigger::after {
+  content: ' \2193';
+  font-size: 0.75em;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+.hover-trigger:hover { color: var(--brand); }
+.hover-trigger:hover::after { opacity: 0.8; }
+
+.hover-gallery {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: max-height 0.45s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+.hover-gallery.is-visible {
+  max-height: 800px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile — always visible */
+@media (hover: none) {
+  .hover-gallery {
+    max-height: none;
+    opacity: 1;
+    transform: none;
+  }
+  .hover-trigger::after { display: none; }
 }
 
 /* ---- DOCUMENTS ---- */
