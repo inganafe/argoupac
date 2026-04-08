@@ -135,11 +135,28 @@ h3 { font-size: 1.25rem; }
   border-color: var(--accent-dark);
 }
 
+/* ---- TOP BAR ---- */
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  background: var(--accent);
+  color: var(--text);
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 6px 16px;
+}
+
 /* ---- HEADER ---- */
 
 .header {
   position: fixed;
-  top: 0;
+  top: 30px;
   left: 0;
   right: 0;
   z-index: 100;
@@ -266,7 +283,7 @@ h3 { font-size: 1.25rem; }
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 72px;
+    top: 102px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -300,7 +317,7 @@ h3 { font-size: 1.25rem; }
   display: flex;
   align-items: center;
   overflow: hidden;
-  margin-top: 72px;
+  margin-top: 102px;
 }
 
 .hero-bg {
@@ -857,7 +874,7 @@ h3 { font-size: 1.25rem; }
 
 .breadcrumbs {
   padding: 24px 0;
-  margin-top: 72px;
+  margin-top: 102px;
   font-size: 0.8125rem;
   color: var(--text-muted);
 }
