@@ -175,7 +175,7 @@ h3 { font-size: 1.25rem; }
   position: relative;
   font-size: 0.8125rem;
   font-weight: 700;
-  color: var(--text);
+  color: #2C3E73;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   padding: 24px 16px;
@@ -285,7 +285,7 @@ h3 { font-size: 1.25rem; }
     padding: 18px 0;
     border-bottom: 1px solid var(--border);
     border-radius: 0;
-    color: var(--text);
+    color: #2C3E73;
   }
   .nav.open a::after { display: none; }
   .nav.open a:hover { color: var(--brand); }
