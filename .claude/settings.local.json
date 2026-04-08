@@ -17,7 +17,17 @@
       "Bash(python3 -c \" import json,sys data=json.load\\(sys.stdin\\) for v in data.get\\('videos',[]\\): print\\(f\\\\\"ID: {v['id']} | {v['duration']}s | {v.get\\('url',''\\)}\\\\\" \\) for f in v.get\\('video_files',[]\\): if f.get\\('quality'\\)=='hd' and f.get\\('width',0\\)>=1280: print\\(f\\\\\" -> {f['width']}x{f['height']} {f['link']}\\\\\"\\) break \")",
       "Bash(curl -s \"https://api.pexels.com/videos/search?query=plastic+packaging+factory+production&per_page=5\" -H \"Authorization: gkxZcbHQiTLqSuJqQM1GxLZijOaFCEyDI9jOBLjd6lZqWTHn6i3l0K0g\")",
       "WebFetch(domain:coverr.co)",
-      "Bash(curl -sI \"https://videos.pexels.com/video-files/852341/852341-hd_1920_1080_30fps.mp4\")"
+      "Bash(curl -sI \"https://videos.pexels.com/video-files/852341/852341-hd_1920_1080_30fps.mp4\")",
+      "Bash(sed:*)",
+      "Bash(python3:*)",
+      "Bash(mkdir -p backups)",
+      "Bash(mv index.html backups/)",
+      "Bash(mv catalog-produkcii:*)",
+      "Bash(mv products:*)",
+      "Bash(mv novosti:*)",
+      "Bash(ls -1 D:/web/argoupac.ru/products/*.html)",
+      "Bash(ls D:/web/argoupac.ru/*.html D:/web/argoupac.ru/css/)",
+      "Bash(ls D:/web/argoupac.ru/products/*.html)"
     ]
   }
 }
