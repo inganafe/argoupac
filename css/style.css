@@ -173,11 +173,12 @@ h3 { font-size: 1.25rem; }
 
 .nav a {
   position: relative;
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 0.8125rem;
+  font-weight: 700;
   color: var(--text);
-  letter-spacing: 0.01em;
-  padding: 24px 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 24px 16px;
   transition: color 0.25s;
 }
 
@@ -185,9 +186,9 @@ h3 { font-size: 1.25rem; }
   content: '';
   position: absolute;
   bottom: 0;
-  left: 20px;
-  right: 20px;
-  height: 2px;
+  left: 16px;
+  right: 16px;
+  height: 3px;
   background: var(--accent);
   transform: scaleX(0);
   transform-origin: left;
@@ -277,21 +278,18 @@ h3 { font-size: 1.25rem; }
   }
 
   .nav.open a {
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 16px 0;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 18px 0;
     border-bottom: 1px solid var(--border);
     border-radius: 0;
+    color: var(--text);
   }
   .nav.open a::after { display: none; }
+  .nav.open a:hover { color: var(--brand); }
   .nav.open a:last-child { border-bottom: none; }
-
-  /* Show phone + CTA inside mobile menu */
-  .nav.open::after {
-    content: '';
-    display: block;
-    margin-top: 24px;
-  }
 }
 
 /* ---- HERO ---- */
