@@ -27,7 +27,8 @@
       "Bash(mv novosti:*)",
       "Bash(ls -1 D:/web/argoupac.ru/products/*.html)",
       "Bash(ls D:/web/argoupac.ru/*.html D:/web/argoupac.ru/css/)",
-      "Bash(ls D:/web/argoupac.ru/products/*.html)"
+      "Bash(ls D:/web/argoupac.ru/products/*.html)",
+      "Read(//d/web/**)"
     ]
   }
 }

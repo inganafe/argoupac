@@ -855,6 +855,71 @@ h3 { font-size: 1.25rem; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 
+/* ---- MOBILE RESPONSIVE ---- */
+
+@media (max-width: 640px) {
+  /* Hero */
+  .hero { min-height: 70vh; }
+  .hero-content { padding: 0 20px; }
+  .hero h1 { font-size: 1.75rem; }
+  .hero p { font-size: 0.9375rem; }
+  .hero-badge { font-size: 0.65rem; padding: 6px 12px; }
+  .hero-buttons { flex-direction: column; }
+  .hero-buttons .btn { width: 100%; }
+
+  /* Buttons */
+  .btn { padding: 12px 24px; font-size: 0.8125rem; width: 100%; }
+
+  /* Stats */
+  .stats { margin-top: -24px; }
+  .stat-number { font-size: 1.75rem; }
+  .stat-item { padding: 20px 16px; }
+
+  /* Sections */
+  .section { padding: 48px 0; }
+  .section-header { margin-bottom: 32px; }
+
+  /* Typography */
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.375rem; }
+  h3 { font-size: 1.1rem; }
+
+  /* Two column */
+  .two-col { gap: 32px; }
+
+  /* Contacts */
+  .contacts-info { padding: 24px 20px; }
+  .contacts-map { min-height: 280px; }
+  .contacts-map iframe { min-height: 280px; }
+
+  /* Footer */
+  .footer { padding: 32px 0; }
+  .footer-inner { gap: 20px; }
+
+  /* Product detail */
+  .product-detail { gap: 24px; }
+  .product-detail-text h1 { font-size: 1.375rem; }
+
+  /* Page hero */
+  .page-hero { padding: 32px 0 40px; }
+
+  /* Docs */
+  .doc-card { padding: 20px 16px; }
+
+  /* Gallery */
+  .gallery-grid { gap: 12px; }
+
+  /* Advantages */
+  .advantage-item { padding: 24px; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .hero-content { padding: 0 16px; }
+  .hero h1 { font-size: 1.5rem; }
+  .stat-number { font-size: 1.5rem; }
+}
+
 /* ---- FOCUS ---- */
 
 *:focus-visible {
