@@ -9,10 +9,10 @@
   --brand-dark: #1E40AF;
   --brand-light: #EFF6FF;
 
-  /* Accent — yellow */
-  --accent: #FFD500;
-  --accent-dark: #E6C200;
-  --accent-light: #FFF9DB;
+  /* Accent — orange */
+  --accent: #ff8559;
+  --accent-dark: #e6703a;
+  --accent-light: #fff0e8;
 
   /* Text */
   --text: #0F172A;
@@ -823,7 +823,7 @@ h3 { font-size: 1.25rem; }
 }
 .footer-phone:hover { color: var(--accent); }
 
-/* Accent CTA button — yellow bg for conversion actions */
+/* Accent CTA button — orange bg for conversion actions */
 .btn-accent {
   background: var(--accent);
   color: var(--text);
