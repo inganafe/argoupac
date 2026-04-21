@@ -1202,7 +1202,7 @@ h3 { font-size: 1.25rem; }
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 56px;
-  align-items: start;
+  align-items: center;
 }
 .featured-content h2 { margin-top: 4px; }
 .featured-content .section-line { margin-bottom: 24px; }
